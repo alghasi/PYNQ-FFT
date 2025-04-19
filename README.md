@@ -33,19 +33,33 @@ import time
 import numpy as np
 from pynq import Xlnk
 from IPython.display import Audio
-```
 Xlnk = Xlnk()
-Download Bit
+```
+
+## Download Bit
 Load FFT project bitstream file on PL
 
-python
+
+```python
 bit = "/home/xilinx/Overlay/fft.bit"
 ol = Overlay(bit)
-VIVADO IPs
+```
+
+
+## Download Bit
+Load FFT project bitstream file on PL
+
+```python
+bit = "/home/xilinx/Overlay/fft.bit"
+ol = Overlay(bit)
+```
+
+## VIVADO IPs
 Show IPs in block diagram as python objects
 
-python
+```python
 ol.ip_dict.keys()
+```
 Output:
 
 dict_keys(['axi_dma_0', 'led', 'sws'])
