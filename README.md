@@ -63,10 +63,10 @@ ol.ip_dict.keys()
 Output:
 
 dict_keys(['axi_dma_0', 'led', 'sws'])
-Direct GPIO
+## Direct GPIO
 Control RGB LED with 3 bits
 
-python
+```python
 ol.led.write(0,1)
 time.sleep(0.2)
 ol.led.write(0,2)
@@ -75,29 +75,34 @@ ol.led.write(0,4)
 time.sleep(0.2)
 ol.led.write(0,0)
 time.sleep(0.2)
-Convert to GPIO
+```
+##Convert to GPIO
 Convert led and sws as GPIO python objects
 
-python
+```python
 led_IP = ol.ip_dict['led']
 led = AxiGPIO(led_IP).channel1
 key_ip = ol.ip_dict['sws']
 key = AxiGPIO(key_ip).channel1
-LED Blinker
+```
+## LED Blinker
 5 time blink RGB led
 
-python
+```python
 for x in range(5):
     led.write(7,7)
     time.sleep(0.2)
     led.write(0,7)
     time.sleep(0.2)
-Read Keys
-python
+```
+
+## Read Keys
+```python
 for x in range(5):
     a = key.read()
     print('Keys = ' + str(a))
     time.sleep(0.5)
+```
 Output:
 
 Keys = 12
@@ -105,36 +110,42 @@ Keys = 12
 Keys = 12
 Keys = 12
 Keys = 12
-DMA Object
-python
+## DMA Object
+```python
 dma_ip = ol.ip_dict['axi_dma_0']
 dma_send = ol.axi_dma_0.sendchannel
 dma_recv = ol.axi_dma_0.recvchannel
-Get Memory
+```
+## Get Memory
 Get Memory for Buffer with Complex int16 for DMA Transfer
 
-python
+```python
 inputBuf = Xlnk.cma_array(shape=(2,1024),dtype=np.int32)
 FFTBuf = Xlnk.cma_array(shape=(2,1024),dtype=np.int32)
-Play Wave Sound
-python
+```
+## Play Wave Sound
+```python
 framerate = 22000
 Audio(inputBuf[0,:],rate=framerate)
-Start DMA
-python
+```
+## Start DMA
+```python
 dma_recv.transfer(FFTBuf)
 dma_send.transfer(inputBuf)
 dma_send.wait()
-ol.led.
-Real Part of Result
-python
+```
+## Real Part of Result
+```python
 plt.plot(FFTBuf[0,:])
 plt.show()
-abs of FFT Result
-python
+```
+## abs of FFT Result
+```python
 plt.plot(np.abs(FFTBuf[0,:]))
 plt.show()
-20 Log of FFT Result
-python
+```
+## 20 Log of FFT Result
+```python
 plt.plot(20*np.log10(np.abs(FFTBuf[0,:])))
 plt.show()
+```
