@@ -33,7 +33,7 @@ import time
 import numpy as np
 from pynq import Xlnk
 from IPython.display import Audio
-
+```
 Xlnk = Xlnk()
 Download Bit
 Load FFT project bitstream file on PL
