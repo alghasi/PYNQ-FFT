@@ -21,7 +21,7 @@ markdown
 ## VIVADO Project
 ![Block Diagram](block1.png)
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/a1qhj8baiU4)
+[![IMAGE ALT TEXT HERE]([https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg](https://i.ytimg.com/vi/a1qhj8baiU4/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBmyNWNYdF6pN64ImjIupznllCjzQ))](https://youtu.be/a1qhj8baiU4)
 
 ## Import Library
 ```python
