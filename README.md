@@ -21,6 +21,8 @@ markdown
 ## VIVADO Project
 ![Block Diagram](block1.png)
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/a1qhj8baiU4)
+
 ## Import Library
 ```python
 from pynq import PL
