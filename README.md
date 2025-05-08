@@ -20,8 +20,8 @@ markdown
 
 ## VIVADO Project
 ![Block Diagram](block1.png)
-
-[![show workshop on youtube](PYNQ2.mp4_snapshot_00.01.542.jpg)](https://youtu.be/a1qhj8baiU4)
+## Watch video of workshop on youtube
+[![Watch video of workshop on youtube](PYNQ2.mp4_snapshot_00.01.542.jpg)](https://youtu.be/a1qhj8baiU4)
 
 ## Import Library
 ```python
